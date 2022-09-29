@@ -13,7 +13,7 @@ class LikesController < ApplicationController
           flash.now[:error] = 'Error: Like could not be saved'
         end
           redirect_to user_post_path(author, post)
-        end
       end
+    end
   end
 end
