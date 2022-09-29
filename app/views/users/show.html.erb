@@ -1,8 +1,8 @@
-  <%= render "partials/user", user: @user %>
-  <div class="card m-3">
+<%= render partial: 'partials/user_display', locals: { user: @user } %>
+<div class="card m-3">
   <div class="card-body">
-    <h3>Bio</h3>
-    <%= @user.bio %>
+    <h5 class="card-title">Bio</h5>
+    <p class="card-text"><%= @user.bio %></p>
   </div>
 </div>
 <% if @user.recent_posts.size.zero? %>
@@ -12,8 +12,18 @@
       </div>
     </div>
 <% else %>
- <% @user.recent_posts.each do |post| %>
-  <%= render "partials/post", {post: post, user: @user} %>
+  <% @user.recent_posts.each do |post| %>
+    <div class="card m-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.title %></h5>
+        <% if post.text.size > 70 %>
+          <p class="card-text"><%= post.text[0, 70] %>...</p>
+        <% else %>
+          <p class="card-text"><%= post.text %></p>
+        <% end %>
+        <p class="mb-2 text-muted text-end"><small>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></small></p>
+      </div>
+    </div>
   <% end %>
   <button type="button" class="btn btn-link text-primary mx-auto d-block mb-4 border border-primary rounded text-decoration-none">
     <%= link_to "See all posts", user_posts_path(@user), class: "text-decoration-none" %>
