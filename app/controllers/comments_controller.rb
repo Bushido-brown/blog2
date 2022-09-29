@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
         else
           flash.now[:error] = 'Error: Comment could not be saved'
         end
-          redirect_to user_post_path(user, post)
+        redirect_to user_post_path(user, post)
       end
     end
   end
