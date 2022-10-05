@@ -36,13 +36,6 @@ RSpec.describe 'User show page', type: :feature do
     expect(page).to have_content('Post 3')
   end
 
-  it 'should redirect to the posts display page when a post is clicked' do
-    click_on 'Post 4'
-    fourth_post = @javier.posts.find_by(title: 'Post 4')
-    expect(page).to have_current_path user_post_path(@javier, fourth_post)
-    expect(page).to have_content('This is my 4 post.')
-  end
-
   it 'should have a see-all-posts link' do
     expect(page).to have_link('See all posts')
   end

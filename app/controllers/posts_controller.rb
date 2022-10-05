@@ -4,7 +4,8 @@ class PostsController < ApplicationController
     @posts_per_page = 2
     @user = User.find(params[:user_id])
     @page = params.fetch(:page, 1)
-    @posts = @user.posts[2 * (@page.to_i - 1), @posts_per_page]
+    # rawposts = @user.posts.includes(:comments)
+    # @posts = rawposts[2 * (@page.to_i - 1), @posts_per_page]
   end
 
   def show

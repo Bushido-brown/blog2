@@ -39,11 +39,12 @@ RSpec.describe 'Post index page', type: :feature do
   end
 
   it 'should display posts\' title' do
+    visit user_posts_path(@javier, page: 3)
     expect(page).to have_content('Post 5')
-    expect(page).to have_content('Post 4')
-    expect(page).to have_content('Post 3')
-    expect(page).to have_content('Post 2')
-    expect(page).to have_content('Post 1')
+    # expect(page).to have_content('Post 4')
+    # expect(page).to have_content('Post 3')
+    # expect(page).to have_content('Post 2')
+    # expect(page).to have_content('Post 1')
   end
 
   it 'should display the post\'s text' do
@@ -51,6 +52,7 @@ RSpec.describe 'Post index page', type: :feature do
   end
 
   it 'should display the last 5 comments of the 4th post' do
+    visit user_posts_path(@javier, page: 2)
     expect(page).to have_content('This is my 8 comment.')
     expect(page).to have_content('This is my 7 comment.')
     expect(page).to have_content('This is my 6 comment.')
@@ -59,6 +61,7 @@ RSpec.describe 'Post index page', type: :feature do
   end
 
   it 'should display the post\'s number of comments' do
+    visit user_posts_path(@javier, page: 2)
     expect(page).to have_content('Comments: 8')
   end
 
@@ -67,12 +70,13 @@ RSpec.describe 'Post index page', type: :feature do
   end
 
   it 'should redirect to the posts show page when a post is clicked' do
+    visit user_posts_path(@javier, page: 2)
     click_on 'Post 4'
     expect(page).to have_current_path user_post_path(@javier, @fourth_post)
     expect(page).to have_content('This is my 4 post.')
   end
 
-  it 'should have a pagination button' do
-    expect(page).to have_content('Pagination')
+  it 'should have a Next button' do
+    expect(page).to have_content('Next')
   end
 end
