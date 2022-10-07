@@ -1,6 +1,5 @@
 class LikesController < ApplicationController
   before_action :authenticate_user!
-  # delete this
 
   def create
     post = Post.find(params[:post_id])

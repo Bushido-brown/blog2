@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  # delete this
 
   @posts_per_page = 2
   @user = User.find(params[:user_id])
