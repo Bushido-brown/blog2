@@ -1,6 +1,4 @@
-<%= render partial: 'partials/user', locals: { user: @user } %>
-<% rawposts = @user.posts %>
-<% @posts = rawposts[2 * (@page.to_i - 1), @posts_per_page] %>
+<%= render partial: 'partials/user_display', locals: { user: @user } %>
 <% @posts.each do |post| %>
   <div class="card m-3">
     <div class="card-body">
