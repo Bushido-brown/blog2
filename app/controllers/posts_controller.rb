@@ -1,44 +1,38 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create delete]
+  before_action :authenticate_user!
 
-  def index
-    @user = User.find(params[:user_id])
+  @posts_per_page = 2
+  @user = User.find(params[:user_id])
+  @page = params.fetch(:page, 1)
+  @posts = @user.posts[2 * (@page.to_i - 1), @posts_per_page]
+
+  def show
+    @post = Post.find(params[:id])
+    @comms = @post.comments.includes(:author)
   end
 
   def new
     @post = Post.new
-  end
-
-  def create
-    @post = Post.new(posts_params) # 2.- Create a new Post object based on the form data
-    @post.author = current_user
-
-    if @post.save # 3.- Save the Post object to the database.
-      redirect_to user_post_url(@post.author_id, @post.id)
-    else
-      render :new
+    respond_to do |format|
+      format.html { render :new, locals: { post: @post } }
     end
   end
 
-  def show
-    @post = Post.find(params[:id])
-    @user = User.find(params[:user_id])
-    @comment = Comment.new
+  def create
+    post = Post.new
+    post.title = params[:user_posts][:title]
+    post.text = params[:user_posts][:text]
+    post.author = current_user
+    respond_to do |format|
+      format.html do
+        if post.save
+          flash[:success] = 'Post was successfully created'
+          redirect_to user_path(current_user)
+        else
+          flash.now[:error] = 'Error: Post could not be saved'
+          render :new, new_user_post_path(current_user)
+        end
+      end
+    end
   end
-
-  def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    authorize! :destroy, @post # User's authorization to destroy
-    @user = User.find(params[:user_id])
-    flash[:notice] = 'Post was deleted'
-    redirect_to user_posts_path(@user.id)
-  end
-
-  # 1.- Retrieves the form data for a post from the params hash
-  def posts_params
-    params.require(:post).permit(:title, :text)
-  end
-
-  private :posts_params
 end
