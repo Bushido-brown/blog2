@@ -1,2 +1,21 @@
-<h1>Here is a list of users</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+  <%= render "partials/user", user: @user %>
+  <div class="card m-3">
+  <div class="card-body">
+    <h3>Bio</h3>
+    <%= @user.bio %>
+  </div>
+</div>
+<% if @user.recent_posts.size.zero? %>
+    <div class="card m-3">
+      <div class="card-body">
+        <p class="mb-2 text-muted"><small>There are no posts yet</small></p>
+      </div>
+    </div>
+<% else %>
+ <% @user.recent_posts.each do |post| %>
+  <%= render "partials/post", {post: post, user: @user} %>
+  <% end %>
+  <button type="button" class="btn btn-link text-primary mx-auto d-block mb-4 border border-primary rounded text-decoration-none">
+    <%= link_to "See all posts", user_posts_path(@user), class: "text-decoration-none" %>
+  </button>
+<% end %>
