@@ -1,0 +1,156 @@
+body {
+  padding: 3% 5%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-link {
+  text-decoration: none;
+  color: black;
+}
+
+.user-cont {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.img-size {
+  width: 150px;
+  height: 150px;
+  margin-right: 5%;
+}
+
+.border {
+  border: 5px solid black;
+}
+
+.user-info {
+  padding: 3%;
+  flex-grow: 1;
+}
+
+.user-name {
+  font-size: 2.5rem;
+}
+
+.num-post {
+  text-align: end;
+}
+
+.com-foot {
+  font-size: 0.8rem;
+}
+
+.main-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stretch {
+  align-self: stretch;
+}
+
+.bio-cont {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.bio-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.post-com-cont {
+  margin-bottom: 20px;
+}
+
+.post-pad {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* Create a form */
+.form-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-sec {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.label {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.user-input {
+  width: 100%;
+}
+
+.text-height {
+  height: 100px;
+}
+
+.left-align {
+  text-align: right;
+}
+
+/* Add styles to devise forms */
+.links-cont {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  row-gap: 10px;
+}
+
+.password {
+  font-size: 0.9rem;
+}
+
+.center-cont {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flex-right {
+  align-items: flex-end;
+}
+
+.center-box {
+  margin: auto;
+  margin-top: 5px;
+}
+
+/* delete buttons */
+.btn-cont {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}

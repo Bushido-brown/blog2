@@ -1,73 +1,53 @@
-# Blog app
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> The Blog app is a classic example of a blog website. That show the list of posts and empower readers to interact with them by adding comments and liking posts. This is the used [data model](./lib/assets/blog_app_erd.png).
+# Blog app: Add API endpoint
+
+> In this part of the project, we added the API ENDPOINT to our app using Jwt.
 
 ## Built With
 
-- Ruby on Rails
-- Rspec
-- SQL
-- Postgresql
+- Ruby on Rails & postgreSQL.
+- Linters (Rubocop, Stylelint).
+- Git & GitHub.
 
 ## Getting Started
 
-To get a local copy, follow these simple steps.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Web browser installed
+    Git
+    PostgreSQL
+    Ruby on Rails
 
 ### Setup
 
-Cloning a repository
+    1. git clone git@github.com:jevazquezb/Blog_app.git
+    2. cd Blog_app
+    3. bundle install
 
-- On GitHub.com, navigate to the main page of the repository;
+### Usage
 
-- Above the list of files, click "Code" button;
+    1. rails server
+    2. xdg-open http://localhost:3000/
 
-- Copy the URL to clone the repository.
+### Done!
 
-  - To clone the repository using HTTPS : `https://github.com/Bushido/blog2.git`
+Ready to work?⛏️ You're all set to explore and change the repo locally (on your computer).
 
-  - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority : `git@github.com:Bushido-brown/blog2.git`
-
-  - To clone a repository using GitHub CLI : `gh repo clone Bushido-brown/blog2`
-
-- Open Terminal;
-
-- Change the current working directory to the location where you want the cloned directory;
-
-- Type `git clone`, and then paste the URL you copied earlier;
-
-- Run `bundle install`;
-
-- Run `rails server`;
-
-- Open `http://localhost:3000/` on your browser.
-
-### Rspec Tests
-
-To run the tests:
-
-- Open your terminal;
-
-- Go to application folder;
-
-- run `rspec`.
-
-## Authors
-
-👤 **Tochukwu Orizu**
-
-- GitHub: [@Bushido-brown](https://github.com/Bushido-brown)
-- Twitter: [@Bushido-brown](https://twitter.com/Bushido-brown)
-- LinkedIn: [Tochukwuorizu](https://linkedin.com/in/Tochukwuorizu)
+## Author
 
 👤 **Jesús Vázquez**
 
 - GitHub: [@jevazquezb](https://github.com/jevazquezb)
 - Twitter: [@javb_1187](https://twitter.com/javb_1187)
 - LinkedIn: [@jevazquezb](https://www.linkedin.com/in/jevazquezb)
+
+👤 **Tochukwu Orizu**
+
+- GitHub: [@Bushido-brown](https://github.com/Bushido-brown)
+- Twitter: [@tuzy](https://twitter.com/tuzy)
+- LinkedIn: [tochukwu orizu](https://www.linkedin.com/in/tochukwuorizu/)
 
 ## 🤝 Contributing
 
@@ -81,9 +61,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse
-- W3Schools
-- Stack Overflow
+- My fellow Micronauts.
+- Google and Stack Overflow.
+- Inspiration.
+- etc.
 
 ## 📝 License
 
