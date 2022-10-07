@@ -2,12 +2,14 @@
 
 > The Blog app is a classic example of a blog website. That show the list of posts and empower readers to interact with them by adding comments and liking posts. This is the used [data model](./lib/assets/blog_app_erd.png).
 
+
 ## Built With
 
 - Ruby on Rails
 - Rspec
-- SQL
+- SQL 
 - Postgresql
+
 
 ## Getting Started
 
@@ -25,13 +27,13 @@ Cloning a repository
 
 - Above the list of files, click "Code" button;
 
-- Copy the URL to clone the repository.
+- Copy the URL to clone the repository. 
 
-  - To clone the repository using HTTPS : `https://github.com/Bushido/blog2.git`
+  - To clone the repository using HTTPS : `https://github.com/ElsonOtake/Blog_App.git`
 
-  - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority : `git@github.com:Bushido-brown/blog2.git`
+  - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority : `git@github.com:ElsonOtake/Blog_App.git`
 
-  - To clone a repository using GitHub CLI : `gh repo clone Bushido-brown/blog2`
+  - To clone a repository using GitHub CLI : `gh repo clone ElsonOtake/Blog_App`
 
 - Open Terminal;
 
@@ -45,6 +47,7 @@ Cloning a repository
 
 - Open `http://localhost:3000/` on your browser.
 
+
 ### Rspec Tests
 
 To run the tests:
@@ -55,13 +58,14 @@ To run the tests:
 
 - run `rspec`.
 
+
 ## Authors
 
-👤 **Tochukwu Orizu**
+👤 **Elson Otake**
 
-- GitHub: [@Bushido-brown](https://github.com/Bushido-brown)
-- Twitter: [@Bushido-brown](https://twitter.com/Bushido-brown)
-- LinkedIn: [Tochukwuorizu](https://linkedin.com/in/Tochukwuorizu)
+- GitHub: [@elsonotake](https://github.com/elsonotake)
+- Twitter: [@elsonotake](https://twitter.com/elsonotake)
+- LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
 
 👤 **Jesús Vázquez**
 
@@ -69,21 +73,31 @@ To run the tests:
 - Twitter: [@javb_1187](https://twitter.com/javb_1187)
 - LinkedIn: [@jevazquezb](https://www.linkedin.com/in/jevazquezb)
 
+👤 **Addisu Haile**
+
+- GitHub: [@Addisu87](https://github.com/Addisu87)
+- Twitter: [@AddisuTedla](https://twitter.com/AddisuTedla)
+- LinkedIn: [Addisu Tedla](www.linkedin.com/in/addisu-tedla/)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
 
 ## Acknowledgments
 
 - Microverse
 - W3Schools
 - Stack Overflow
+
 
 ## 📝 License
 
